@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Safety net for deep links (site uses hash routing, so this is rarely hit)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
